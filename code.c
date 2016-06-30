@@ -1,96 +1,80 @@
-	case 0x20:
-		//jr nz, *
+	case 0x30:
+		//jr nc,*
 		
-		pc++
 		return 0;
 
-	case 0x21:
-		//ld hl, **
+	case 0x31:
+		//ld sp,**
 		
-		pc++
 		return 0;
 
-	case 0x22:
-		//ld (**), hl
+	case 0x32:
+		//ld (**),a
 		
-		pc++
 		return 0;
 
-	case 0x23:
-		//inc hl
+	case 0x33:
+		//inc sp
 		
-		pc++
 		return 0;
 
-	case 0x24:
-		//inc h
+	case 0x34:
+		//inc (hl)
 		
-		pc++
 		return 0;
 
-	case 0x25:
-		//dec h
+	case 0x35:
+		//dec (hl)
 		
-		pc++
 		return 0;
 
-	case 0x26:
-		//ld h,*
+	case 0x36:
+		//ld (hl),*
 		
-		pc++
 		return 0;
 
-	case 0x27:
-		//daa
+	case 0x37:
+		//scf
 		
-		pc++
 		return 0;
 
-	case 0x28:
-		//jr z, *
+	case 0x38:
+		//jr c,*
 		
-		pc++
 		return 0;
 
-	case 0x29:
-		//add hl,hl
+	case 0x39:
+		//add hl,sp
 		
-		pc++
 		return 0;
 
-	case 0x2a:
-		//ld hl, (**)
+	case 0x3a:
+		//ld a,(**)
 		
-		pc++
 		return 0;
 
-	case 0x2b:
-		//dec hl
+	case 0x3b:
+		//dec sp
 		
-		pc++
 		return 0;
 
-	case 0x2c:
-		//inc l
+	case 0x3c:
+		//inc a
 		
-		pc++
 		return 0;
 
-	case 0x2d:
-		//dec l
+	case 0x3d:
+		//dec a
 		
-		pc++
 		return 0;
 
-	case 0x2e:
-		//ld l, *
+	case 0x3e:
+		//ld a,*
 		
-		pc++
 		return 0;
 
-	case 0x2f:
-		//cpl
+	case 0x3f:
+		//ccf
 		
-		pc++
 		return 0;
 

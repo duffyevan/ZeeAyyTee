@@ -10,7 +10,7 @@ while col < 16:
     outfile.write("\tcase " + str(hex((row<<4)+col)) + ":\n")
     outfile.write("\t\t//" + info + "\n")
     outfile.write("\t\t\n")
-    outfile.write("\t\tpc++;\n")
+    #outfile.write("\t\tpc++;\n")
     outfile.write("\t\treturn 0;\n")
     outfile.write("\n")
     col += 1
