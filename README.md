@@ -8,10 +8,10 @@ A Z80 Computer Running Inside of an Arduino
 
 
 ##Known Issues##
-	- No RC or IV // I don't know what they do yet so I cant write code for them
-	- I will not be implementing the extended set just yet since its going to quadruple my work
-	- Error codes tell you near where the program failed, not always exactly on the instruction
-	- Flags have not really been implemented yet
+- No RC or IV // I don't know what they do yet so I cant write code for them
+- I will not be implementing the extended set just yet since its going to quadruple my work
+- Error codes tell you near where the program failed, not always exactly on the instruction
+- Flags have not really been implemented yet
 
 
 ##This will be done "Eventually"##
