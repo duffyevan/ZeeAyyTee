@@ -59,6 +59,7 @@ void loop(){
 			while (1);
 			break;
 	}
+    pc++;
 }
 
 int decodeInstruction(){ // Returns 0 if instruction executed successfully, 1 if there was a problem in format, 2 if the instruction is not supported yet
@@ -156,29 +157,26 @@ int decodeInstruction(){ // Returns 0 if instruction executed successfully, 1 if
     case 0x11:
         //LD DE, **
         de = [++pc];
-        pc++;
         return 0;
 
     case 0x12:
         //LD (DE), A
         ram[de] = a;
-        pc++;
         return 0;
 
     case 0x13:
         //INC DE
         de++;
-        pc++;
         return 0;
 
     case 0x14:
         //INC D
-        
+        de += 0x100;
         return 0;
 
     case 0x15:
         //DEC D
-        de-= 1<<8;
+        de-= 0x100;
         return 0;
 
     case 0x16:
@@ -201,19 +199,16 @@ int decodeInstruction(){ // Returns 0 if instruction executed successfully, 1 if
     case 0x19:
         //ADD HL, DE
         hl += de;
-        pc++;
         return 0;
 
     case 0x1a:
         //LD A, (DE)
         a = ram[de];
-        pc++;
         return 0;
 
     case 0x1b:
         //DEC DE
         de--;
-        pc++;
         return 0;
 
     case 0x1c:
@@ -230,7 +225,6 @@ int decodeInstruction(){ // Returns 0 if instruction executed successfully, 1 if
         //LD E, *
         de &= 0xFF<<8;
         de += ram[++pc];
-        pc++;
         return 0;
 
     case 0x1f:
@@ -247,91 +241,76 @@ int decodeInstruction(){ // Returns 0 if instruction executed successfully, 1 if
     case 0x21:
         //ld hl, **
         hl = ram[++pc];
-        pc++;
         return 0;
 
     case 0x22:
         //ld (**), hl
         
-        pc++
         return 0;
 
     case 0x23:
         //inc hl
         
-        pc++
         return 0;
 
     case 0x24:
         //inc h
         
-        pc++
         return 0;
 
     case 0x25:
         //dec h
         
-        pc++
         return 0;
 
     case 0x26:
         //ld h,*
         
-        pc++
         return 0;
 
     case 0x27:
         //daa
         
-        pc++
         return 0;
 
     case 0x28:
         //jr z, *
         
-        pc++
         return 0;
 
     case 0x29:
         //add hl,hl
         
-        pc++
         return 0;
 
     case 0x2a:
         //ld hl, (**)
         
-        pc++
         return 0;
 
     case 0x2b:
         //dec hl
         
-        pc++
         return 0;
 
     case 0x2c:
         //inc l
         
-        pc++
         return 0;
 
     case 0x2d:
         //dec l
         
-        pc++
         return 0;
 
     case 0x2e:
         //ld l, *
         
-        pc++
         return 0;
 
     case 0x2f:
         //cpl
         
-        pc++
         return 0;
 
 
